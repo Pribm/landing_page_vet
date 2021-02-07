@@ -1,0 +1,22 @@
+*{
+    margin:0;
+    padding:0;
+    list-style: none;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body, html{
+    width: 100vw;
+}
+
+@import 'fonts';
+@import 'mediaQueries';
+@import 'navbar';
+@import 'hero';
+@import 'video_area--white';
+@import 'services';
+@import '_vetcareTeam';
+@import 'contacts';
+@import 'posts';
+@import 'footer';

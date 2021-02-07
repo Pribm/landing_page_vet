@@ -1,0 +1,98 @@
+.videoAreaWhite{
+    padding: 10%;
+    min-height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    &__text--left{
+        flex: 1 0 50%;
+        @include main-font(black, black);
+
+        h1{
+            @include paragraph(4rem, black, SemiBold);
+            line-height: 5rem;
+            @include phone{
+                @include paragraph(3rem, black, SemiBold);
+                line-height: 3.5rem;
+                text-align: center;
+            }
+        }
+
+        p{
+            @include paragraph(2rem, black, Regular);
+            line-height: 3rem;
+            @include phone{
+                font-size: 1.2rem;
+                line-height: 2rem;
+                text-align: center;
+            }
+        }
+    }
+
+    &__text--right{
+        display: inline-block;
+        text-align: right;
+        flex: 1 0 50%;
+       
+        h1{
+            @include paragraph(4rem, black, SemiBold);
+            line-height: 5rem;
+            @include phone{
+                @include paragraph(3rem, black, SemiBold);
+                line-height: 3.5rem;
+                text-align: center;
+            }
+        }
+
+        p{
+            @include paragraph(2rem, black, Regular);
+            line-height: 3rem;
+            @include phone{
+                font-size: 1.2rem;
+                line-height: 2rem;
+                text-align: center;
+            }
+        }
+    }
+
+    &__video{
+        flex: 1 0 40%;
+        position: relative;
+       img{
+           width: 100%;
+           height: 100%;
+           object-fit: contain;
+           z-index: 50;
+           position: relative;
+           padding: 30px;
+       }
+    }
+
+    &__square{
+        z-index: 10;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background-color:  #fcc302;
+        width: 30%;
+        height: 30%;
+    }
+
+    button{
+        margin-top: 3%;
+        padding:15px 35px;
+        font-family: 'Poppins Regular';
+        background-color: #fcc302;
+        color: white;
+        border: solid 1px white;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: .3s all ease;
+        &:hover{
+            background-color: white;
+            color: #fcc302;
+        }
+    }
+}

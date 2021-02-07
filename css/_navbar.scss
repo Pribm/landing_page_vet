@@ -1,0 +1,97 @@
+nav{
+    position: fixed;
+    top:0;
+    background-color: #daac00;
+    padding: 1%;
+    width: 100vw;
+    z-index: 100;
+
+    & .container{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    img{
+        cursor: pointer;
+        height:50px;
+        @include phone{
+            height: 40px;
+        }
+    }
+
+    .search{
+        height: 35px;
+        display: flex;
+        box-shadow: 0 8px 12px 1px rgba(0, 0, 0, 0.274);
+    }
+
+    button{
+        background-color:  #00bec9;
+        color: white;
+        border: none;
+        outline: none;
+        height: 100%;
+        width: 45px;
+        border-radius: 0;
+    }
+
+    input{
+        padding-left: 10px;
+        height:35px;
+        border: none;
+        background-color:  #fcc302;
+        font-family: 'Poppins Regular';
+        color: white;
+
+        &:focus{
+            outline: none;
+            border: none;
+        }
+    }
+
+    li{
+        display: inline-block;
+        padding-inline: 30px;
+        
+        & a{
+            font-family: Poppins Regular;
+            color: white;
+            transition: .3s all ease;
+            &:hover{
+                background-color:  #00bec9;
+                box-shadow: 0 3px 5px 1px rgba(0, 0, 0, 0.2);
+                padding: 10px;
+
+            }
+        }
+
+        @include phone{
+            display: none;
+        }
+
+        @include tablet{
+            display: none;
+        }
+    }
+}
+
+.bars{
+    display: none;
+    background-color: #00bec9;
+    color: white;
+    padding: 5px;
+    border-radius: 2px;
+    font-size: 1.2rem;
+    line-height: 1.2rem;
+    cursor: pointer;
+
+    @include phone{
+        display: inline-block;
+    }
+
+    @include tablet{
+        display: inline-block;
+    }
+}
