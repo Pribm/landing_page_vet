@@ -48,6 +48,24 @@ nav .container {
       flex-wrap: wrap;
 }
 
+@media (min-width: 280px) and (max-width: 767px) {
+  nav .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  nav .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 nav img {
   cursor: pointer;
   height: 50px;
@@ -68,13 +86,26 @@ nav .search {
           box-shadow: 0 8px 12px 1px rgba(0, 0, 0, 0.274);
 }
 
+@media (min-width: 280px) and (max-width: 767px) {
+  nav .search {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  nav .search {
+    display: none;
+  }
+}
+
 nav button {
   background-color: #00bec9;
   color: white;
   border: none;
   outline: none;
-  height: 100%;
-  width: 45px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 25%;
+          flex: 1 0 25%;
   border-radius: 0;
 }
 
@@ -85,6 +116,9 @@ nav input {
   background-color: #fcc302;
   font-family: 'Poppins Regular';
   color: white;
+  -webkit-box-flex: 2;
+      -ms-flex: 2 1 75%;
+          flex: 2 1 75%;
 }
 
 nav input:focus {
@@ -114,16 +148,31 @@ nav li a:hover {
 @media (min-width: 280px) and (max-width: 767px) {
   nav li {
     display: none;
+    margin-top: 2px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    max-width: 50%;
+    margin: 10px auto;
   }
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
   nav li {
     display: none;
+    margin-top: 2px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    max-width: 50%;
+    margin: 10px auto;
   }
 }
 
 .bars {
+  position: absolute;
+  top: 8px;
+  right: 20px;
   display: none;
   background-color: #00bec9;
   color: white;
